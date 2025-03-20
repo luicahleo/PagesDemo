@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage
+    x:Class="PagesDemo.FlyOutPageDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FlyOutPageDemo"
+    FlyoutLayoutBehavior="SplitOnLandscape">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="MyApp" BackgroundColor="Blue">
+            <StackLayout Padding="20">
+                <Button Clicked="OnOption1Clicked" Text="Opción 1" />
+                <Button Clicked="OnOption2Clicked" Text="Opción 2" />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Página Principal" BackgroundColor="red">
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="Selecciona una opción del menú"
+                        VerticalOptions="Center" />
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>
